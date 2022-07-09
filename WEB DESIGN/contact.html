@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Linking external CSS -->
+
+    <title>contact us page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script>
+        /*Writing JavaScript Codes*/
+        function validateForm() {
+            var n = document.forms['contact_form']['fn'].value;
+            var c_n = document.forms['contact_form']['cn'].value;
+            var eml = document.forms['contact_form']['em'].value;
+
+            if (n == "" || c_n == "" || eml == "") {
+                alert("Please fill in all the information");
+            } else {
+                alert("Thank You for your response!");
+            }
+        }
+
+        function Bright() {
+            var mode = document.getElementById("okay");
+            mode.className = "changeB";
+        }
+    </script>
+</head>
+
+<body>
+    <style>
+        /*Internal CSS codes*/
+        
+        body {
+            /*Provide CSS to body*/
+            background: grey;
+            color: rgb(0, 0, 0);
+        }
+        
+        .nav-area {
+            float: right;
+            list-style: none;
+            margin-top: 30px;
+        }
+        
+        .nav-area li {
+            display: inline-block;
+        }
+        
+        .nav-area li a {
+            color: rgb(8, 8, 8);
+            text-decoration: none;
+            padding: 5px 20px;
+            border: 1px soli transparent;
+            transition: 0.6s ease;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+        
+        .nav-area li a:hover {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 235, 235);
+        }
+        
+        .nav-area.active a {
+            background-color: #fff;
+            color: #000;
+        }
+        
+        .logo img {
+            width: 100px;
+            float: left;
+            height: auto;
+        }
+        
+        .main h1 {
+            font-size: 35px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        
+        .ContactInfromation {
+            padding-top: 40px;
+            float: right;
+        }
+        
+        .ContactInfromation ul {
+            position: relative;
+        }
+        
+        .ContactInfromation ul li {
+            position: relative;
+            list-style: none;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        
+        .ContactInfromation ul li .icon {
+            display: inline-block;
+            width: 30px;
+            font-size: 18px;
+            color: rgb(3, 3, 3);
+        }
+        
+        .ContactInfromation ul li span {
+            color: rgb(15, 14, 14);
+            font-weight: 300;
+        }
+        
+        .changeB {
+            /*Provide CSS to the class changeit*/
+            background-color: rgb(182, 182, 114);
+        }
+        
+        .contact-form .message {
+            background: #000;
+            font-size: 20px;
+            color: #fff;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            font-size: 15px;
+            min-height: 200px;
+            max-height: 400px;
+            resize: vertical;
+            border-radius: 5px;
+            box-shadow: 0 1px 1px rgba( 0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .main {
+            /*Provide CSS to the class main*/
+            margin: 20px;
+        }
+    </style>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="pic/logo1.png" alt="">
+        </div>
+        <ul class="nav-area">
+            <li class="active"><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="CV.html">CV</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="research.html">Research</a></li>
+        </ul>
+    </div>
+    <div class=main>
+        <h1>Contact us</h2>
+            <!--Using the anchor tab form to get inputs from user-->
+            <div class=Contact>
+                <form name="contact_form" onsubmit="validateForm()">
+                    <table>
+                        <tr>
+                            <th>Name: <input type='text' name='fn'></th>
+
+                        </tr><br>
+                        <tr>
+
+                            <th> message <input type='text' name='cn'></th>
+                        </tr>
+                        <tr>
+
+                            <th>Email: <input type='text' name='em'></th>
+                        </tr>
+                        <tr>
+
+                            <th colspan="2"><input type="submit"></th>
+                        </tr>
+
+
+                    </table>
+
+                </form>
+
+
+
+                <div class="ContactInfromation">
+                    <h3 class="title">Contact Information</h3>
+                    <ul>
+                        <li>
+                            <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i>
+            </span>
+                            <span class="text">9813995507</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+                            <span class="text">shreychettri7@gmail.com</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i>
+            </span>
+                            <span class="text">New baneshwor, Kathmandu, Nepal</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+
+    </div>
+
+    </div>
+
+    <body id="okay">Click here to change background</body>
+    <button onclick="Bright()">change background</button>
+    <div class="bottom">
+        <p id="target"></p>
+    </div>
+    <script>
+        function currentDate() {
+            document.getElementById("target").innerHTML = Date();
+            setTimeout(currentDate)
+        }
+        currentDate()
+    </script>
+</body>
+
+</html>
